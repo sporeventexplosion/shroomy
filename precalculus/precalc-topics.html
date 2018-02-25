@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+    <title>Trigonometry/Precalculus S1-2.02</title>
+    <style>
+      body {
+        margin: 1em auto 0;
+        max-width: 720px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover, a:focus {
+        text-decoration: underline;
+      }
+      .contents ul {
+        list-style-type: disc;
+      }
+      h3 {
+        font-size: 1.3em;
+        font-weight: normal;
+      }
+      div, ol, ul, li {
+        margin-bottom: 1em;
+      }
+      div.math {
+        margin: 0.3em;
+        background-color: #fff9c4;
+        padding: 0.8em 1.6em;
+      }
+      img {
+        width: 100%;
+      }
+      @media print {
+        body {
+          padding: 1em 1.5em;
+        }
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        var $w = $('[data-w]');
+        var $math = $('[data-math]');
+        for (var i = 0; i < $w.length; i++) {
+          var $e = $w.eq(i);
+          $e.css('width', $e.attr('data-w'));
+        }
+
+        for (var i = 0; i < $math.length; i++) {
+          var $e = $math.eq(i);
+          var m = $e.text();
+          $e.text('');
+          if (m) {
+            try {
+              $e.addClass('math');
+              katex.render(m, $e.get(0));
+            }
+            catch (ex) {
+              alert('Math rendering failed');
+              throw ex;
+            }
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Precalculus Review</h1>
+      <ol class="contents">
+        <li>
+          <div>
+            <a href="#ch-1">Graphs</a>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#ch-1-1">Distance and Midpoint formulas</a></li>
+              <li><a href="#ch-1-2">Graph of an equation in two variables</a></li>
+              <li><a href="#ch-1-3">Lines</a></li>
+              <li><a href="#ch-1-4">Circles</a></li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div id="ch-1">
+      <h1>1. Graphs</h1>
+      <div id="ch-1-1">
+        <h2>Distance and Midpoint formulas</h2>
+        <div>The distance between two points <span data-math>A=(x_1,y_1)</span> and <span data-math>B=(x_2,y_2)</span> can be found by
+          <div data-math>d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</div>
+        </div>
+        <div>The coordinates of the midpoint <span data-math>M</span> of a line segment with endpoints <span data-math>A=(x_1,y_1)</span> and <span data-math>B=(x_2,y_2)</span> can be found by
+          <div data-math>M=(\dfrac{x_1 + x_2}{2},\dfrac{y_1 + y_2}{2})</div>
+        </div>
+      </div>
+      <div id="ch-1-2">
+        <h2>Graph of an equation in two variables</h2>
+        <div>The <strong>graph of an equation in two variable</strong> <span data-math>x</span> and <span data-math>y</span> is the set of points in the xy-plane the coordinates <span data-math>(x,y)</span> of which satisfy the equation. A point <span data-math>(x,y)</span> is <strong>on the graph</strong> of an equation when <span data-math>x</span> and <span data-math>y</span> satisfy the equation, and a point <span data-math>(x,y)</span> is <strong>not on the graph</strong> of an equation when <span data-math>x</span> and <span data-math>y</span> do not satisfy the equation</div>
+        <div>
+          <h3>Intercepts of graphs</h3>
+          <div>Points of a graph that touch or cross the coordinate axes (or equivalently, a point with coordinates <span data-math>(x,y)</span> that satisfies the equation with either <span data-math>x=0</span> or <span data-math>y=0</span>) are known as the <strong>intercepts</strong> of a graph.</div>
+          <div>The x-coordinate of a point on the graph on the x axis is known as the <strong>x-intercept</strong> and the y-coordinate of a point on the graph on the y axis is known as the <strong>y-intercept</strong>. Intercepts may be found using either the equation or the graph of the equation.</div>
+          <div>x-intercepts and y-intercepts can be found respectively by setting <span data-math>y</span> or <span data-math>x</span> to 0 and solving the equation for <span data-math>x</span> or <span data-math>y</span>.</div>
+        </div>
+        <div>
+          <h3>Symmetries of graphs</h3>
+          <ul>
+            <li>A graph is <strong>symmetric with respect to the x-axis</strong> if for every <span data-math>(x,y)</span> on the graph, <span data-math>(x,-y)</span> is also on the graph (this is equivalent to saying that a graph of a equation is symmetric with respect to the x-axis if for all <span data-math>(x,y)</span> satisfying the equation, <span data-math>(x,-y)</span> also satisfies the equation because a point <span data-math>(x,y)</span> satisfying the equation is equivalent to <span data-math>(x,y)</span> being on the equation's graph). </li>
+            <li>A graph is <strong>symmetric with respect to the y-axis</strong> if for every <span data-math>(x,y)</span> on the graph, <span data-math>(-x,y)</span> is also on the graph (can also be viewed from the perspective of sets <span data-math>(x,y)</span> satisfying the graph's equation).</li>
+            <li>A graph is <strong>symmetric with respect to the origin</strong> if for every <span data-math>(x,y)</span> on the graph, <span data-math>(-x,-y)</span> is also on the graph (can also be viewed from the perspective of sets <span data-math>(x,y)</span> satisfying the graph's equation).</li>
+          </ul>
+          <div>Equations can be tested for symmetries directly without their graphs.</div>
+          <ul>
+            <li>The graph of an equation is symmetric with respect to the x-axis if an equivalent equation results from replacing all <span data-math>y</span> with <span data-math>-y</span> in the equation.</li>
+            <li>The graph of an equation is symmetric with respect to the x-axis if an equivalent equation results from replacing all <span data-math>x</span> with <span data-math>-x</span> in the equation.</li>
+            <li>The graph of an equation is symmetric with respect to the x-axis if an equivalent equation results from replacing all <span data-math>x</span> with <span data-math>-x</span> and <span data-math>y</span> with <span data-math>-y</span> in the equation.</li>
+          </ul>
+          <div>Equations may sometimes be more easily graphed when properties of equations such as intercepts and symmetries are known.</div>
+        </div>
+      </div>
+      <div id="ch-1-3">
+        <h2>Lines</h2>
+        <div>The graph of a linear equation in two unknowns in a xy-plane is a line, and any line in a xy-plane can be represented by a linear equation in two unknowns.</div>
+        <div>
+          <h3>Slope</h3>
+          <div>The <strong>slope</strong> of a nonvertical line in a xy-plane can be thought of as a measure of the line's "steepness"</div>
+          <div>Let <span data-math>(x_1,y_1)</span> and <span data-math>(x_2,y_2)</span> be two distinct points on a nonvertical line, the slope <span data-math>m</span> of the line is defined as
+            <div data-math>m=\dfrac{x_2-x_1}{y_2-y_1}\quad x_1 ≠ x_2</div>
+            The slope of a nonvertical line is the same regardless of the two points chosen.
+          </div>
+          <div>The slope of a vertical line is <strong>undefined</strong>.</div>
+        </div>
+        <div>
+          <h3>Equations of a line</h3>
+          <div>The <strong>equation of a vertical line</strong> is <div data-math>x=a</div> where <span data-math>a</span> is the x-intercept of the line.</div>
+          <div>The <strong>equation of a horizontal line</strong> is <div data-math>y=b</div> where <span data-math>b</span> is the y-intercept of the line.</div>
+          <div>The <strong>point-slope form of the equation of a line</strong> is a form of the equation for a nonvertical line. The equation of a nonvertical line with slope <span data-math>m</span> that contains point <span data-math>(x_1,y_1)</span> is <div data-math>y-y_1=m(x-x_1)</div></div>
+          <div>The <strong>slope-intercept from of the equation of a line</strong> is a form of the equation for a nonvertical line. The equation of a nonvertical line with slope <span data-math>m</span> and y-intercept <span data-math>b</span> is <div data-math>y=mx+b</div></div>
+          <div>The equation of the <strong>general form</strong> or <strong>standard form</strong> of a line is a form of the equation for any line in the xy-plane. It is written as <div data-math>Ax+By+C=0</div> or sometimes<div data-math>Ax+By=C</div> where <span data-math>A</span>, <span data-math>B</span>, and <span data-math>C</span> are real numbers and <span data-math>A</span> and <span data-math>B</span> are not both 0.</div>
+        </div>
+        <div>
+          <h3>Parallel and perpendicular lines</h3>
+          <div><strong>Two nonvertical lines are parallel</strong> if and only if their slopes are equal and they have different y-intercepts. (The if and only if means that two separate statements, one the converse of the toher are made. In this case it means 1. if two nonvertical lines have equal slopes and different y-intercepts, they are parallel; 2. if two nonvertical lines are parallel, they have equal slopes and different y-intercepts.)</div>
+          <div><strong>Two nonvertical lines are perpendicular</strong> if and only if the product of their slopes equals -1.</div>
+        </div>
+      </div>
+      <div id="ch-1-4">
+        <h2>Circles</h2>
+        <div>In the xy-plane, a <strong>circle</strong> is the set of all points a fixed distance <span data-math>r</span> from a fixed center <span data-math>(h,k)</span>. The fixed distance <span data-math>r</span> is the <strong>radius</strong> of the circle, and the fixed point <span data-math>(h,k)</span> is the <strong>center</strong> of the circle.</div>
+        <div>The <strong>standard form of an equation of a circle</strong> with radius <span data-math>r</span> and center <span data-math>(h,k)</span> is <div data-math>(x-h)^2+(y-k)^2=r^2</div></div>
+        <div>When the center is the origin <span data-math>(0,0)</span>, the equation can be written as <div data-math>x^2+y^2=r^2</div></div>
+        <div>The circle with radius <span data-math>r=1</span> and center at origin <span data-math>(0,0)</span> is known as the <strong>unit circle</strong>, with equation <div data-math>x^2+y^2=1</div></div>
+        <div>When the graph of an equation is a circle, the <strong>general form of an equation of a circle</strong> is an equation of the form <div data-math>x^2+y^2+ax+by+c=0</div></div>
+        <div>The equation <span data-math>x^2+y^2+ax+by+c=0</span> with arbitrary real <span data-math>a</span>, <span data-math>b</span>, and <span data-math>c</span> represents a circle only for some <span data-math>a</span>, <span data-math>b</span>, and <span data-math>c</span>. In other cases, it may represent one point or no points.</div>
+        <div>An equation of a circle can be converted between the standard form and general form.</div>
+      </div>
+    </div>
+  </body>
+</html>
