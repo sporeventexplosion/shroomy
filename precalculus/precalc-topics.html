@@ -4,19 +4,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css" integrity="sha384-exe4Ak6B0EoJI0ogGxjJ8rn+RN3ftPnEQrGwX59KTCl5ybGzvHGKjhPKk/KC3abb" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.js" integrity="sha384-OMvkZ24ANLwviZR2lVq8ujbE/bUO8IR1FdBrKLQBI14Gq5Xp/lksIccGkmKL8m+h" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css" integrity="sha384-TEMocfGvRuD1rIAacqrknm5BQZ7W7uWitoih+jMNFXQIbNl16bO8OZmylH/Vi/Ei" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js" integrity="sha384-jmxIlussZWB7qCuB+PgKG1uLjjxbVVIayPJwi6cG6Zb4YKq0JIw+OMnkkEC7kYCq" crossorigin="anonymous"></script>
     <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
   crossorigin="anonymous"></script>
-    <title>Trigonometry/Precalculus S1-2.02</title>
+    <title>Precalculus Review</title>
     <style>
       body {
         margin: 1em auto 0;
+        font-family: 'Times New Roman', serif;
+        line-height: 1.5;
+      }
+      .header,
+      .chapter {
+        width: 100%;
         max-width: 720px;
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.4;
+        margin: 0 auto;
       }
       a {
         text-decoration: none;
@@ -27,9 +32,16 @@
       .contents ul {
         list-style-type: disc;
       }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: Arial, Helvetica, sans-serif;
+      }
       h3 {
         font-size: 1.3em;
-        font-weight: normal;
       }
       div, ol, ul, li {
         margin-bottom: 1em;
@@ -41,6 +53,18 @@
       }
       img {
         width: 100%;
+      }
+      .footer {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8em;
+        margin: 1em 0 0;
+        padding: 1em;
+        background-color: #eee;
+      }
+      .footer-inner {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto 0;
       }
       @media print {
         body {
@@ -76,42 +100,52 @@
     </script>
   </head>
   <body>
-    <div>
+    <div class="header">
       <h1>Precalculus Review</h1>
-      <ol class="contents">
+      <ul class="contents">
         <li>
           <div>
-            <a href="#ch-1">Graphs</a>
+            <a href="#ch-1">1. Graphs</a>
           </div>
           <div>
             <ul>
-              <li><a href="#ch-1-1">Distance and Midpoint formulas</a></li>
+              <li><a href="#ch-1-1">Distance and midpoint formulas</a></li>
               <li><a href="#ch-1-2">Graph of an equation in two variables</a></li>
               <li><a href="#ch-1-3">Lines</a></li>
               <li><a href="#ch-1-4">Circles</a></li>
             </ul>
           </div>
         </li>
-      </ol>
+        <li>
+          <div>
+            <a href="#ch-2">2. Functions and their graphs</a>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#ch-2-1">Functions</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div id="ch-1">
+    <div id="ch-1" class="chapter">
       <h1>1. Graphs</h1>
       <div id="ch-1-1">
-        <h2>Distance and Midpoint formulas</h2>
-        <div>The distance between two points <span data-math>A=(x_1,y_1)</span> and <span data-math>B=(x_2,y_2)</span> can be found by
+        <h2>Distance and midpoint formulas</h2>
+        <div>The <strong>distance</strong> between two points <span data-math>A=(x_1,y_1)</span> and <span data-math>B=(x_2,y_2)</span> in the xy-plane is
           <div data-math>d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}</div>
         </div>
-        <div>The coordinates of the midpoint <span data-math>M</span> of a line segment with endpoints <span data-math>A=(x_1,y_1)</span> and <span data-math>B=(x_2,y_2)</span> can be found by
+        <div>The coordinates of the <strong>midpoint</strong> <span data-math>M</span> of a line segment with endpoints <span data-math>A=(x_1,y_1)</span> and <span data-math>B=(x_2,y_2)</span> is
           <div data-math>M=(\dfrac{x_1 + x_2}{2},\dfrac{y_1 + y_2}{2})</div>
         </div>
       </div>
       <div id="ch-1-2">
         <h2>Graph of an equation in two variables</h2>
-        <div>The <strong>graph of an equation in two variable</strong> <span data-math>x</span> and <span data-math>y</span> is the set of points in the xy-plane the coordinates <span data-math>(x,y)</span> of which satisfy the equation. A point <span data-math>(x,y)</span> is <strong>on the graph</strong> of an equation when <span data-math>x</span> and <span data-math>y</span> satisfy the equation, and a point <span data-math>(x,y)</span> is <strong>not on the graph</strong> of an equation when <span data-math>x</span> and <span data-math>y</span> do not satisfy the equation</div>
+        <div>The <strong>graph of an equation in two variables</strong> <span data-math>x</span> and <span data-math>y</span> is the set of points in the xy-plane the coordinates <span data-math>(x,y)</span> of which satisfy the equation. A point <span data-math>(x,y)</span> is <strong>on the graph</strong> of an equation when <span data-math>x</span> and <span data-math>y</span> satisfy the equation, and a point <span data-math>(x,y)</span> is <strong>not on the graph</strong> of an equation when <span data-math>x</span> and <span data-math>y</span> do not satisfy the equation</div>
         <div>
           <h3>Intercepts of graphs</h3>
-          <div>Points of a graph that touch or cross the coordinate axes (or equivalently, a point with coordinates <span data-math>(x,y)</span> that satisfies the equation with either <span data-math>x=0</span> or <span data-math>y=0</span>) are known as the <strong>intercepts</strong> of a graph.</div>
-          <div>The x-coordinate of a point on the graph on the x axis is known as the <strong>x-intercept</strong> and the y-coordinate of a point on the graph on the y axis is known as the <strong>y-intercept</strong>. Intercepts may be found using either the equation or the graph of the equation.</div>
+          <div>Points on the graph of an equation that touch or cross the coordinate axes (or equivalently, a point with coordinates <span data-math>(x,y)</span> that satisfies the equation with either <span data-math>x=0</span> or <span data-math>y=0</span>) are called the <strong>intercepts</strong> of a graph.</div>
+          <div>The x-coordinate of a point on the graph on the x axis is called the <strong>x-intercept</strong> and the y-coordinate of a point on the graph on the y axis is called the <strong>y-intercept</strong>. Intercepts may be found using either the equation or the graph of the equation.</div>
           <div>x-intercepts and y-intercepts can be found respectively by setting <span data-math>y</span> or <span data-math>x</span> to 0 and solving the equation for <span data-math>x</span> or <span data-math>y</span>.</div>
         </div>
         <div>
@@ -152,7 +186,7 @@
         </div>
         <div>
           <h3>Parallel and perpendicular lines</h3>
-          <div><strong>Two nonvertical lines are parallel</strong> if and only if their slopes are equal and they have different y-intercepts. (The if and only if means that two separate statements, one the converse of the toher are made. In this case it means 1. if two nonvertical lines have equal slopes and different y-intercepts, they are parallel; 2. if two nonvertical lines are parallel, they have equal slopes and different y-intercepts.)</div>
+          <div><strong>Two nonvertical lines are parallel</strong> if and only if their slopes are equal and they have different y-intercepts. (The if and only if means that two separate statements, one the converse of the other are made. In this case it means 1. if two nonvertical lines have equal slopes and different y-intercepts, they are parallel; 2. if two nonvertical lines are parallel, they have equal slopes and different y-intercepts.)</div>
           <div><strong>Two nonvertical lines are perpendicular</strong> if and only if the product of their slopes equals -1.</div>
         </div>
       </div>
@@ -161,10 +195,33 @@
         <div>In the xy-plane, a <strong>circle</strong> is the set of all points a fixed distance <span data-math>r</span> from a fixed center <span data-math>(h,k)</span>. The fixed distance <span data-math>r</span> is the <strong>radius</strong> of the circle, and the fixed point <span data-math>(h,k)</span> is the <strong>center</strong> of the circle.</div>
         <div>The <strong>standard form of an equation of a circle</strong> with radius <span data-math>r</span> and center <span data-math>(h,k)</span> is <div data-math>(x-h)^2+(y-k)^2=r^2</div></div>
         <div>When the center is the origin <span data-math>(0,0)</span>, the equation can be written as <div data-math>x^2+y^2=r^2</div></div>
-        <div>The circle with radius <span data-math>r=1</span> and center at origin <span data-math>(0,0)</span> is known as the <strong>unit circle</strong>, with equation <div data-math>x^2+y^2=1</div></div>
+        <div>The circle with radius <span data-math>r=1</span> and center at origin <span data-math>(0,0)</span> is called the <strong>unit circle</strong>, with equation <div data-math>x^2+y^2=1</div></div>
         <div>When the graph of an equation is a circle, the <strong>general form of an equation of a circle</strong> is an equation of the form <div data-math>x^2+y^2+ax+by+c=0</div></div>
         <div>The equation <span data-math>x^2+y^2+ax+by+c=0</span> with arbitrary real <span data-math>a</span>, <span data-math>b</span>, and <span data-math>c</span> represents a circle only for some <span data-math>a</span>, <span data-math>b</span>, and <span data-math>c</span>. In other cases, it may represent one point or no points.</div>
         <div>An equation of a circle can be converted between the standard form and general form.</div>
+      </div>
+    </div>
+    <div id="ch-2" class="chapter">
+      <h1>2. Functions and their graphs</h1>
+      <div id="ch-2-1">
+        <h2>Functions</h2>
+        <div>A <strong>function</strong> is a relation that associates two sets (usually the set of real numbers or a subset of the set of real numbers, but also may be the set of complex numbers or other sets) <span data-math>X</span> and <span data-math>Y</span> such that each element of <span data-math>X</span> is associated with exactly one element of <span data-math>Y</span></div>
+        <div>The set <span data-math>X</span> is called the <strong>domain</strong> of the function. For each element <span data-math>x</span> in <span data-math>X</span>, the corresponding element <span data-math>y</span> in <span data-math>Y</span> is called the value of the function at <span data-math>x</span>, or the <strong>image</strong> of <span data-math>x</span>. The set of all images of the elements of the domain is called the <strong>range</strong> of the function. The range is always a subset of <span data-math>Y</span>, but is not necessarily equal to <span data-math>Y</span>. A function may be a "one-to-one" or "many-to-one" relation, but a "one-to-many" relationship is not a function. The value of a function for a given input is determined by the input.</div>
+        <div>A function may be represented as a letter, such as <span data-math>f</span>, and the notation <span data-math>f(x)</span>represents the value of <span data-math>f</span> for input <span data-math>x</span>. <span data-math>f(x)</span> is also sometimes to represent the function itself.</div>
+        <div>
+          <h3>Representations of functions</h3>
+          <div>A function may be represented as a diagram of the relation between two sets <span data-math>X</span> and <span data-math>Y</span> that indicate the association between elements in <span data-math>X</span> and <span data-math>Y</span>.</div>
+          <div>A function may be represented by an equation. For an equation to represent a function, every value of the independent variable in the domain of the function must have exactly one corresponding value of the dependent variable.</div>
+          <div>For example, the equation <span data-math>x + y = 3</span> can represent a function with independent variable <span data-math>x</span> and dependent variable <span data-math>y</span>. The function can be rewritten as <span data-math>y = x - 3</span> to show that every <span data-math>x</span> in the domain (in this case the set of real numbers) corresponds to exactly one <span data-math>y</span>.</div>
+          <div>As another example, the equation <span data-math>y^2 = x</span> does not represent a function with independent variable <span data-math>x</span> (with the domain being the set of real numbers) and dependent variable <span data-math>y</span>. Solving for <span data-math>y</span>, we see that <span data-math>y = \pm \sqrt{x}</span>, meaning that except for <span data-math>x = 0</span>, every <span data-math>x</span> corresponds to two distinct <span data-math>y</span>'s.</div>
+          <div>A function may also be specified by its graph. A graph is a set of points. A set of points <span data-math>(x, y)</span>, either represented by a graph or otherwise, represents a function with independent variable <span data-math>x</span> and dependent variable <span data-math>y</span> if and only if there is at most one point with any given <span data-math>x</span>.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-inner">
+        <div>All rights reserved. No part of this publication may be reproduced in any form without prior written permission from the author.</div>
+        <div>Last updated on 2018-03-07</div>
       </div>
     </div>
   </body>
